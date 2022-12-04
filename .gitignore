@@ -1,0 +1,14 @@
+# Photoshop Sourcefiles
+*.psd
+
+# WebStorm Config Files
+.idea
+
+# Sourcemaps
+*.css.map
+
+# Fonts i don't have a license for :(
+*.woff2
+
+# A bigger 4x4 version of the individual letter comparison
+assets/images/Comparison/collection

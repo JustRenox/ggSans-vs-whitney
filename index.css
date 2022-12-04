@@ -1,0 +1,57 @@
+@font-face {
+  font-family: gg sans;
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/gg sans (Normal, 400).woff2");
+}
+@font-face {
+  font-family: whitney;
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/whitneybook.woff2");
+}
+.ggNormal {
+  font-family: "gg sans", sans-serif;
+  border-color: #cb4c4c;
+}
+
+.whitney {
+  font-family: "whitney", sans-serif;
+  border-color: #1d9dde;
+}
+
+.empty {
+  border-color: #21b021;
+}
+
+p {
+  display: flex;
+  color: black;
+  font-size: 11rem;
+  font-weight: 400;
+  line-height: 15.125rem;
+  margin: auto;
+  border-style: solid;
+  border-width: 10px;
+}
+
+strong {
+  font-weight: 800;
+}
+
+div p {
+  margin: 0 !important;
+  width: 180px;
+}
+
+div.ignore p {
+  width: auto !important;
+}
+
+div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=index.css.map */
