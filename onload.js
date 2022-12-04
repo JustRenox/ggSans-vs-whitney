@@ -4,46 +4,27 @@ const ggNormalAlphabetContainerLower = document.getElementById("ggNormalAlphabet
 const ggNormalAlphabetContainerUpper = document.getElementById("ggNormalAlphabetContainerUpper");
 const whitneyAlphabetContainerLower = document.getElementById("whitneyAlphabetContainerLower");
 const whitneyAlphabetContainerUpper = document.getElementById("whitneyAlphabetContainerUpper");
+
+const fonts = ["whitney", "ggNormal", "empty"]
 const alphabetLower = "abcdefghijklmnopqrstuvwxyz";
-const alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const alphabetUpper = alphabetLower.toUpperCase();
 const emptyAlphabet = "                          ";
+const containersArray = [[alphabetLower, alphabetComparisonLower, whitneyAlphabetContainerLower, ggNormalAlphabetContainerLower],
+[alphabetUpper, alphabetComparisonUpper, whitneyAlphabetContainerUpper, ggNormalAlphabetContainerUpper]]
 
-console.log("hey")
-
-for(let i = 0; i < alphabetLower.length; i++){
-    let whitneyLetter = document.createElement("p");
-    whitneyLetter.classList.add("whitney");
-    whitneyLetter.innerHTML = alphabetLower[i];
-    let ggLetter = document.createElement("p");
-    ggLetter.classList.add("ggNormal");
-    ggLetter.innerHTML = alphabetLower[i];
-    let emptyLetter = document.createElement("p");
-    emptyLetter.innerHTML = emptyAlphabet[i];
-    emptyLetter.classList.add("empty");
-    alphabetComparisonLower.appendChild(whitneyLetter)
-    alphabetComparisonLower.appendChild(ggLetter)
-    alphabetComparisonLower.appendChild(emptyLetter)
-    let whitneyElementClone = whitneyLetter.cloneNode(true)
-    let ggElementClone = ggLetter.cloneNode(true)
-    ggNormalAlphabetContainerLower.appendChild(ggElementClone)
-    whitneyAlphabetContainerLower.appendChild(whitneyElementClone)
-}
-
-for(let i = 0; i < alphabetUpper.length; i++){
-    let whitneyLetter = document.createElement("p");
-    whitneyLetter.classList.add("whitney");
-    whitneyLetter.innerHTML = alphabetUpper[i];
-    let ggLetter = document.createElement("p");
-    ggLetter.classList.add("ggNormal");
-    ggLetter.innerHTML = alphabetUpper[i];
-    let emptyLetter = document.createElement("p");
-    emptyLetter.innerHTML = emptyAlphabet[i];
-    emptyLetter.classList.add("empty");
-    alphabetComparisonUpper.appendChild(whitneyLetter)
-    alphabetComparisonUpper.appendChild(ggLetter)
-    alphabetComparisonUpper.appendChild(emptyLetter)
-    let whitneyElementClone = whitneyLetter.cloneNode(true)
-    let ggElementClone = ggLetter.cloneNode(true)
-    ggNormalAlphabetContainerUpper.appendChild(ggElementClone)
-    whitneyAlphabetContainerUpper.appendChild(whitneyElementClone)
-}
+containersArray.forEach((containers) => {
+    for(let i = 0; i < containers[0].length; i++){
+        fonts.forEach(font => {
+            let element = document.createElement("p");
+            if(font === "empty"){
+                element.innerHTML = emptyAlphabet[i];
+            } else {
+                element.innerHTML = containers[0][i];
+            }
+            element.classList.add(font);
+            containers[1].appendChild(element)
+            if(font === "whitney") containers[2].appendChild(element.cloneNode(true))
+            if(font === "ggNormal") containers[3].appendChild(element.cloneNode(true))
+        })
+    }
+})
