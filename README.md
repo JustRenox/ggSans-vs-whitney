@@ -63,6 +63,14 @@ Links to images:
 [a-z](assets/images/width/gg%20a-z.png),
 [A-Z](assets/images/width/gg%20big%20a-z.png)
 
+## String length comparison
+![table of letters and their frequency (in english)](assets/images/width/messageLengthIncreaseTable.png)
+
+Although it's not too much, your average Discord message will increase by an estimate of about 5%.<br>
+
+*Site-note: I used the relative frequencies in the English language for texts according to Wikipedia*<br>
+*Using the dictionary frequency wouldn't make sense, at least for me, since the average discord user is hardly going to use the majority of words contained inside one*
+
 # Letter by letter comparison
 
 <img src="assets/images/comparison/a.png" alt="drawing" width="400"/><img src="assets/images/comparison/b.png" alt="drawing" width="400"/><br>
