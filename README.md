@@ -1,4 +1,9 @@
-# ggSans-vs-whitney
+# ggSans-vs-whitney contents:
+1. [Fonts overview](#fonts-overview)
+2. [Anatomy comparison (Baseline, Height, Cap)](#anatomy-comparison--baseline-height-cap-)
+3. [Anatomy comparison (width)](#anatomy-comparison--width-)
+4. [Letter by letter comparison](#letter-by-letter-comparison)
+
 
 # Fonts overview
 
@@ -40,6 +45,7 @@ Links to images:
 [a-z0-9](assets/images/lines/gg%20a-z0-9%20lines.png)
 
 *Side-note: viewing those images inside an app like photoshop or similar where you can zoom to pixel level is recommended here*
+*also the tittle height difference for the i and j using gg sans seems to be caused by the browsers rendering engine*
 
 # Anatomy comparison (width)
 
